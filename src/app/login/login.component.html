@@ -1,4 +1,4 @@
-<div><small>{{errorMessage}}</small></div>
+<div *ngIf = "errorMessageValid"><small>{{errorMessage}}</small></div>
 <div>
   <p>
     Username: <input type="text" name="username" [(ngModel)]= "username">     
