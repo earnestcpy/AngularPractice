@@ -7,13 +7,15 @@ import { WelcomeComponent } from './welcome/welcome.component'; //Angular Compon
 import { LoginComponent } from './login/login.component'; //Angular Component
 import { ErrorComponent } from './error/error.component';//Angular Component
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { ListToDoComponent } from './list-to-do/list-to-do.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     LoginComponent,
-    ErrorComponent
+    ErrorComponent,
+    ListToDoComponent
   ],
   imports: [
     BrowserModule,
