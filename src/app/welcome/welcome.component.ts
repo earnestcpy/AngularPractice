@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
+import { ActivatedRoute } from '@angular/router';
+
+
 
 // @{Decorator}
 @Component({
@@ -10,14 +13,21 @@ import { AppComponent } from '../app.component';
 })
 export class WelcomeComponent implements OnInit {
 
-  globalmessage= 'Welcome message from WelcomeComponent global';
+  globalmessage= 'Welcome message from WelcomeComponent--global';
+  name = '';
   
-  constructor() { }
+
+  //ActivatedRoute --pick up the current route which are active and accept the paramter which is passed in
+  constructor(private route: ActivatedRoute) { }
 
   // void init(){}
   ngOnInit() {
     // ngOnInit(): void     {function(): return type}
     var localmessage:string = 'Welcome message from WelcomeComponent local';
+    this.name = this.route.snapshot.params['name'];
+
+    //get the parameter from ActivedRoute
+    //console.log(this.route.snapshot.params['name']);
     console.log(this.globalmessage);
     console.log(localmessage);
   }

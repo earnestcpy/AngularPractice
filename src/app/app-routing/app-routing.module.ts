@@ -8,7 +8,10 @@ import { ErrorComponent } from '../error/error.component';
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'welcome', component: WelcomeComponent},
+
+  //passing parameter to WelcomeComponent
+  {path: 'welcome/:name', component: WelcomeComponent},
+
   {path: '**', component: ErrorComponent}      // define unknown or undeclare path and route to Error Component
 ];
 
