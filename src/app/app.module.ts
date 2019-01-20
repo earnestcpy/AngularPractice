@@ -9,7 +9,11 @@ import { ErrorComponent } from './error/error.component';//Angular Component
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ListToDoComponent } from './list-to-do/list-to-do.component';
 
+
+// define and customize Angular Module called AppModule
 @NgModule({
+
+  //the following components are part of this specific module (AppModule)
   declarations: [
     AppComponent,
     WelcomeComponent,
@@ -17,12 +21,16 @@ import { ListToDoComponent } from './list-to-do/list-to-do.component';
     ErrorComponent,
     ListToDoComponent
   ],
+  // components in this specific AppModule need to import / work with the following module to finish tasks
   imports: [
     BrowserModule,
-    FormsModule,
-    AppRoutingModule
+    FormsModule,  // FormsModule to use ngModule 
+    AppRoutingModule // AppRouting Module to use single page routing 
   ],
+
   providers: [],
-  bootstrap: [AppComponent]
+  
+  // When this module is loaded, tell the application which component to be loaded.
+  bootstrap: [AppComponent]  
 })
 export class AppModule { }
