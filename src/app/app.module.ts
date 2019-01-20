@@ -11,6 +11,7 @@ import { ListToDoComponent } from './list-to-do/list-to-do.component';
 
 
 // define and customize Angular Module called AppModule
+// Important: Angular Module is a group of directive and component, which are dedicated to a specific purpose.
 @NgModule({
 
   //the following components are part of this specific module (AppModule)
