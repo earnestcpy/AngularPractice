@@ -1,3 +1,20 @@
-<p>
-  list-to-do works!
-</p>
+<div>
+    <table border="1">
+      <caption>Todo list</caption>
+
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>description</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- for (int temp : temp_int_array)  -->
+        <tr *ngFor=" let todo of todos">
+              <td>{{todo.id}}</td>
+              <td>{{todo.description}}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>>
