@@ -8,7 +8,9 @@ import { WelcomeComponent } from './welcome/welcome.component'; //Javascript Com
 import { LoginComponent } from './login/login.component'; //Javascript Component
 import { ErrorComponent } from './error/error.component';//Javascript Component
 import { AppRoutingModule } from './app-routing/app-routing.module'; //...
-import { ListToDoComponent } from './list-to-do/list-to-do.component';//...
+import { ListToDoComponent } from './list-to-do/list-to-do.component';
+import { MenuComponent } from './menu/menu.component';
+import { FooterComponent } from './footer/footer.component';//...
 
 
 // define and customize Angular Module called AppModule
@@ -21,7 +23,9 @@ import { ListToDoComponent } from './list-to-do/list-to-do.component';//...
     WelcomeComponent,
     LoginComponent,
     ErrorComponent,
-    ListToDoComponent
+    ListToDoComponent,
+    MenuComponent,
+    FooterComponent
   ],
   // components in this specific AppModule need to import / work with the following module to finish tasks
   imports: [
