@@ -1,14 +1,14 @@
-<div *ngIf = "errorMessageInValid"><small>{{errorMessage}}</small></div>
-<div>
-  <p>
-    Username: <input type="text" name="username" [(ngModel)]= "username">     
-                                                  <!-- [()]  banana-in-a-box bing -->
-    </p>
-    <p>
-    Password: <input type="password" name="password" [(ngModel)]="password">
-    </p>
-    
-    <p>
-      <button (click)="handleLogin()">Login</button>
-    </p>
+<div class="container">
+  <h1>Login</h1>
+  <div class ="alert alert-warning" *ngIf = "errorMessageInValid"><small>{{errorMessage}}</small></div>
+  
+  <div>
+      Username: <input type="text" name="username" [(ngModel)]= "username">     
+                                                    <!-- [()]  banana-in-a-box bing -->
+
+      Password: <input type="password" name="password" [(ngModel)]="password">
+      
+      <button class="btn btn-success" (click)="handleLogin()">Login</button>
+  </div>
+
 </div>
