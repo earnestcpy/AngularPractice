@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 // Inject Router into LoginComponent
 import { Router } from '@angular/router';
+import { HardcodedauthService } from '../service/hardcodedauth.service';
 
 
 @Component({
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
   //Router
   //Angular.giveMeRouter
   //Dependency Injection
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private HardcodedauthService: HardcodedauthService) { }
 
   ngOnInit() {
   }
