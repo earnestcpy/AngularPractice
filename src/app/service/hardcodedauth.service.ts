@@ -31,4 +31,8 @@ export class HardcodedauthService {
     
     return !(user === null);
   }
+
+  userLogout(): void{
+    sessionStorage.removeItem('username');
+  }
 }
