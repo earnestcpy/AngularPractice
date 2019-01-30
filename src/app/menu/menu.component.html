@@ -5,20 +5,20 @@
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li>
-                    <a class="nav-link" routerLink="/welcome/123">Home </a>         
+                    <a *ngIf="hardcodedauthService.isUserLogin()" class="nav-link" routerLink="/welcome/123">Home </a>         
                 </li>
                 
                 <li>
-                    <a class="nav-link" routerLink="/todos">Todo</a>
+                    <a  *ngIf="hardcodedauthService.isUserLogin()" class="nav-link" routerLink="/todos">Todo</a>
                 </li>
             </ul>
 
             <ul class="navbar-nav justify-content-end">
                 <li>
-                    <a class="nav-link" routerLink="/login">Login</a>
+                    <a *ngIf="!hardcodedauthService.isUserLogin()"class="nav-link" routerLink="/login">Login</a>
                 </li>
                 <li>
-                    <a class="nav-link" routerLink="/login">Logout</a>
+                    <a *ngIf="hardcodedauthService.isUserLogin()" class="nav-link" routerLink="/login">Logout</a>
                 </li>
             </ul>
         </div>
