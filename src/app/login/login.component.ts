@@ -21,14 +21,14 @@ export class LoginComponent implements OnInit {
   //Angular.giveMeRouter
   //Dependency Injection
   constructor(private router: Router,
-    private HardcodedauthService: HardcodedauthService) { }
+    private hardcodedauthService: HardcodedauthService) { }
 
   ngOnInit() {
   }
 
   handleLogin(){
     console.log(this.username  + this.password);
-    if(this.HardcodedauthService.authenicateUser(this.username, this.password)){
+    if(this.hardcodedauthService.authenicateUser(this.username, this.password)){
       this.router.navigate(['welcome', this.username]);
       this.errorMessageInValid= false;
     }
