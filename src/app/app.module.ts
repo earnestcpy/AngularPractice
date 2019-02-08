@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';    //Angular Module  
 import { NgModule } from '@angular/core';                     //Angular Module
 import { FormsModule } from '@angular/forms';                 //Angular Module
 import { CommonModule } from '@angular/common';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';               //Javascript Component 
 import { WelcomeComponent } from './welcome/welcome.component'; //Javascript Component
@@ -12,6 +13,8 @@ import { ListToDoComponent } from './list-to-do/list-to-do.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';//...
+import { HttpIntercepterBasicAuthService } from './service/http/http-intercepter-basic-auth.service';
+
 
 
 // define and customize Angular Module called AppModule
@@ -33,10 +36,15 @@ import { LogoutComponent } from './logout/logout.component';//...
   imports: [
     BrowserModule,
     FormsModule,  // FormsModule to use ngModule 
-    AppRoutingModule // AppRouting Module to use single page routing 
+    AppRoutingModule, // AppRouting Module to use single page routing 
+    HttpClientModule //Http request Module
   ],
 
-  providers: [],
+  providers: [
+     {
+     provide: HTTP_INTERCEPTORS, useClass: HttpIntercepterBasicAuthService, multi: true
+   }
+],
   
   // When this module is loaded, tell the application which component to be loaded.
 
